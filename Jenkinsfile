@@ -20,5 +20,12 @@ pipeline {
           sh 'docker push congtin/cicd_fe:v1.0'
         }
       }
+      stage('ssh server') {
+        steps {
+          sshagent(['ssh_ubuntu']) {
+           sh "ssh -o StrichHostKeyChecking=no -l cloudbees 54.251.185.74@ubuntu bash ./deploy.sh"
+         }
+        }
+      }
   }
 }
