@@ -18,6 +18,11 @@ pipeline {
         steps {
           sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
         }
-    }
+      }
+      stage('Push') {
+        steps {
+          sh 'docker push congtin/cicd_fe:v1.0'
+        }
+      }
   }
 }
