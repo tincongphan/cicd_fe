@@ -1,8 +1,10 @@
 pipeline {
  agent any
- stages {
-    stage("Clone") {
-      git 'https://github.com/tincongphan/cicd_fe.git'
-    }
- }
+  stages {
+      stage("Clone") {
+        steps {
+          git 'https://github.com/tincongphan/cicd_fe.git'
+        }
+      }
+  }
 }
