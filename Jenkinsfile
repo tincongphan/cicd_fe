@@ -23,7 +23,7 @@ pipeline {
       stage('ssh server') {
         steps {
           sshagent(['ssh_ubuntu']) {
-           sh "ssh -o StrichHostKeyChecking-no -l ubuntu@54.254.203.176 bash ./deploy.sh"
+           sh "ssh -o StrictHostKeyChecking=no -l ubuntu 54.254.203.176 bash ./deploy.sh"
          }
         }
       }
