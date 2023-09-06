@@ -23,7 +23,7 @@ pipeline {
       stage('ssh server') {
         steps {
           sshagent(['ssh_ubuntu']) {
-           sh "ssh -o StrichHostKeyChecking=no -l cloudbees ubuntu@46.137.234.170 bash ./deploy.sh"
+           sh "ssh -o StrichHostKeyChecking=no ubuntu@46.137.234.170 bash ./deploy.sh"
          }
         }
       }
