@@ -1,4 +1,8 @@
-FROM node:lts
-WORKDIR /app_build
+FROM node:16.18-alpine
+WORKDIR /app-frontend
+COPY package.json package-lock.json /app-frontend/
 COPY . .
-RUN npm install && npm run build
+RUN npm install build
+
+
+
