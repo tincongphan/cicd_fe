@@ -12,13 +12,13 @@ function App() {
           const getdata = await axios.get("http://localhost123/api")
           console.log('getdata:', getdata.data)
         }}
-      >click me 1</button>
+      >ok</button>
       <button
         onClick={async () => {
           const getdata = await axios.get("http://localhost63450/5465api/111")
           console.log('getdata:', getdata.data)
         }}
-      >click carhay</button>
+      >ok</button>
       <button
         onClick={async () => {
 
